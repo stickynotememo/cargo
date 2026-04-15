@@ -33,6 +33,7 @@ pub fn builtin() -> Vec<Command> {
         rustc::cli(),
         rustdoc::cli(),
         search::cli(),
+        ship::cli(),
         test::cli(),
         tree::cli(),
         uninstall::cli(),
@@ -79,6 +80,7 @@ pub fn builtin_exec(cmd: &str) -> Option<Exec> {
         "rustc" => rustc::exec,
         "rustdoc" => rustdoc::exec,
         "search" => search::exec,
+        "ship" => ship::exec,
         "test" => test::exec,
         "tree" => tree::exec,
         "uninstall" => uninstall::exec,
@@ -123,6 +125,7 @@ pub mod run;
 pub mod rustc;
 pub mod rustdoc;
 pub mod search;
+pub mod ship;
 pub mod test;
 pub mod tree;
 pub mod uninstall;
